@@ -1,0 +1,170 @@
+.form-page {
+    margin-bottom: 150px; /*Create more space above the footer */
+}
+
+/* Style feedback form content */
+#feedback-form {
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+    background: #c3e3eb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#feedback-form h2 {
+    color: #333;
+    text-align: center;
+}
+
+#form-statement {
+    font-size: 1em;
+    margin-top: 20px;
+    padding: 15px;
+    color: #402a8f;
+    background-color: #d4e7ec;
+    border-radius: 5px;
+    align-items: center;
+}
+
+ /* style confirm message*/
+ #confirmation-message { 
+    color: #138a0f;
+    font-weight: bold;
+}
+
+#required {
+    color: red;
+    margin-top: 20px;
+}
+
+label {
+    display:block;
+    margin-top: 20px;
+}
+
+.y-n-options {
+    display:block;
+    margin-top: 20px;
+}
+
+#visit-id {
+    margin-top: 15px;
+}
+
+#informative-ye {
+    text-align: center;
+}
+
+input[type=text],
+input[type=email],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* makes sure the padding doesn't affect the total width */
+}
+
+input[type=radio] {
+    margin-top: 0px;
+}
+
+button {           /* Preview, submit buttons style */
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Style Edit button in preview section */
+#preview button {   
+    width: 30%;
+    padding: 10px;
+    display: block;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.error {
+    border: 2px solid red;
+}
+
+.error-message {
+    color: rgb(238, 28, 28);
+    display: block; 
+    margin-top: 5px;
+}
+
+
+/*Style to line up the satisfaction numbers horizontally */
+#satisfaction-radio {
+    display: flex;
+    justify-content:center;
+    max-width: 400px; /* Adjust the width as necessary */
+    margin: 0 auto;
+}
+
+/* Style the labels and radio buttons for the satisfaction scale to be in line */
+#satisfaction-radio label {
+    margin: 10px 20px 0 5px; 
+}
+
+/* Style labels of all radio buttons*/
+label[for="recommend-yes"], label[for="recommend-no"],
+label[for="first-visit-yes"], label[for="first-visit-no"],
+label[for="informative-yes"], label[for="informative-no"] {
+    display: inline;         /* Aligns labels horizontally */
+    margin:0 10px 0 0;
+}
+
+/* Style all the radio buttons */
+#visiting-options, 
+#informative-options,
+#recommendation-options {
+    display: flex;
+    justify-content:center;
+    margin-top: 10px;
+}
+
+#visiting-options input[type="radio"],
+#recommendation-options input[type="radio"],
+#informative-options input[type="radio"] {
+    margin: 0 5px; 
+}
+
+/* Add a margin-top from all radio buttons */
+input[type="radio"] {
+    margin-top: 10px;    
+}
+
+/*Style preview content*/
+#preview {
+    margin:10px 10px 0 10px;
+    padding: 10px;
+    background-color: #80c3ca;
+    border-radius: 10px;
+}
+#preview h3 {
+    color: #233374;
+    text-align: center;
+    padding: 10px;
+}
+
+#preview p {
+    color: #040e25;
+    padding: 10px;
+}
