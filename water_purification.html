@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Purification</title>
+	
+	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="water_purification.css" rel="stylesheet" type="text/css"> <!-- link css file of shop-->
+	<link href="nav.css"  rel="stylesheet" type="text/css"><!--link css file of navigation barand footer-->
+</head>
+<body>
+  <!--Navigaion bar-->
+    <header>
+        <img class="logo" src="image/logo.jpg" alt="AquaMart-Logo">
+        <nav class="navbar" id="mynavbar">
+<a href="home.html">Home</a>    
+            <a href="about.html">About us</a>
+            <a href="shop.html">Product</a> 
+            <a href="donateus.html">Donate us</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactus.html">Contacts</a>
+            <a href="profile.html">Login</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">  <!--menu icon-->
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>    
+	<main> <!--add main container for get space before the footer wave-->
+		<div id="container" class="water-purification"> <!--add div  class for store body elements-->
+			<h2>Your trusted source for pure... </h2> <!--add heading to the page-->
+				<p class="txt-container">At Aqua Mart,We used variety of water purification methods to ensure every drop of water we provide is off the highest quality.From used advanced purification methods and techniques,we guarantee impurities,contaminants,and pollutants is free from that water.</P> <!--add <p> tag forr describe purification process-->
+					<h3>Hear are our purification methods and process</h3> <!--<h3> tag for describe methods--> 
+			
+					<div id="method-container" class="method1"> <!-- add div container for describe each method-->
+						<h4>1.Boilling</h4>
+							<p class="machine">Boiler Machine</p>
+							<img class="img-container" src="image/boilling.jpg" alt="boilling-machine">
+							<p>Boilling Process</p>
+								<ul class="about-process"> <!-- add list for descripe process steps-->
+									<li>Boilling water is a simple and effective method,that involves heating water to it's boilling point.</li>
+									<li>Typically water boils around 100degrees celsius(212 degrees Fahrenheight).</li>
+									<li>We use this method to kill or inactivates harmfull bacteria and  viruses. 
+									<li>After boiling the water is allowed to cool before being stored in clean, sanitized containers.</li>
+									<li>This method we does not use chemicals.</li>
+								</ul>
+								<img class="img-container" src="image/boilling2.jpg" alt="boilling-process">
+					</div>
+			
+					<div id="method-container" class="method2">
+						<h4>2.Filtaration</h4>
+							<p class="machine">Filtaration Machine</p>
+							<img class="img-container" src="image/filteration.jpg" alt="filtaration-machine">
+							<p>Filteration Process</p>
+								<ul class="about-process">
+									<li>Cooled boilled water undergo filtration to remove suspended particles, sediment, and larger impurities.</li>
+									<li>Filteration can be done various methods such as sand filteration,gravity filteration membrane filtaration and active carbon filteration.</li>
+									<li>Among them we use membrane filtaraion system to provide quality products to our customers.</li>
+									<li>Membrane filtration system utilizes semi-permeable membranes to purify water by separating contaminants based on size and molecular weight.</li>
+									<li>In this stage trapping and removing tiny contaminants like dirt, bacteria, and chemicals in water.</li>
+									<li>This process ensures the water becomes clean and safe to drink. </li>
+								</ul>
+								<img class="img-container" src="image/filteration2.jpg" alt="filteration-process">
+					</div>
+			
+					<div id="method-container" class="method3">
+						<h4>3.Distillation</h4>
+							<p class="machine">Distillation Machine</p>
+							<img class="img-container" src="image/distalation.jpg" alt="distillation-machine">
+							<p>Distillation Process</P>
+								<ul class="about-process">
+									<li>In this stage, water is boiled to produce steam, which is then condensed back into liquid form.</li>
+									<li>After that steam is collected and cooled in a separate chamber, leaving behind impurities such as minerals, heavy metals, and contaminants.</li>
+									<li>Distillation effectively removes dissolved solids, organic compounds, and microorganisms from the water, producing highly purified water.</li>
+								</ul>
+								<img class="img-container" src="image/distalation2.jpg" alt="distillation-process">
+					</div>
+			
+					<div id="method-container" class="method4">
+						<h4>4.Chlorination</h4>
+							<p class="machine">Chlorination system</p>
+							<img class="img-container" src="image/Clorination.jpg" alt="Chlorination-machine">
+							<p>Chlorination Process</p>
+								<ul class="about-process">
+									<li>In this stage we are adding chlorine gas, chlorine compounds, or chloramines to the water to disinfect it.</li>
+									<li>The chlorine reacts with organic matter and microbial pathogens present in the water, killing or inactivating them.</li>
+									<li>Our company use this process widely used method for treating drinking water and wastewater due to its effectiveness in destroying a wide range of pathogens.</li>
+									<img class="img-container" src="image/Clorination2.jpg" alt="Chlorination-process">
+								</ul>
+					</div>
+			
+					<div id="method-container" class="method5">
+						<h4>5.UV Treatment</h4>
+							<p class="machine">UV Treatment Machine</p>
+							<img class="img-container" src="image/uv.jpg" alt="UV Treatment-machine">
+							<p>UV Treatment Process</p>
+							<ul class="about-process">
+								<li>This helps utilizes ultraviolet (UV) light to disinfect water by disrupting the DNA of microorganisms.</li>
+								<li>Water passes through a UV chamber where it is exposed to UV light of a specific wavelength.</li>
+								<li>The UV light penetrates the cells of bacteria, viruses, and other pathogens, preventing them from reproducing and rendering them harmless.</li>
+								<li>UV treatment is a chemical-free and environmentally friendly method of water disinfection</li>
+								<img class="img-container" src="image/uv2.jpg" alt="UV Treatment-process">
+							</ul>
+					</div>
+			
+					<div id="method-container" class="method6">
+						<h4>6.Reverse Osmosis</h4>
+							<p class="machine">Reverse Osmosis Machine</p>
+							<img class="img-container" src="image/ro.jpg" alt="Reverse Osmosis-machine">
+							<p>Reverse Osmosis Process</p>
+								<ul class="about-process">
+									<li>This step is a filtration process that uses a semi-permeable membrane to remove dissolved solids, salts, and contaminants from water.</li>
+									<li>Water is forced through the RO membrane at high pressure, while impurities are retained on one side of the membrane.</li>
+									<li>The purified water passes through the membrane, leaving behind concentrated brine or waste water.</li>
+									<li>RO is effective in removing a wide range of contaminants, including heavy metals, dissolved solids, and microbiological pathogens.</li>
+									<img class="img-container" src="image/ro2.jpg" alt="Reverse Osmosis-process">
+								</ul>
+					</div>
+			
+		</div>
+	</main>
+	<!--Displaying the footer part of the web page-->
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+
+        <div class="footer-container">
+            <!-- Footer Branding Section -->
+            <div class="footer-branding">
+                <img src="image/logo.jpg" alt="AquaMartLogo" class="footer-logo">
+
+                <p class="footer-contact">
+                <strong>72/2, Vajira Road,<br> Colombo 007,<br> Sri Lanka.</strong><br>
+                Phone: 0112226444<br>
+                Email: <a href="mailto:aquamart@gmail.com">aquamart@gmail.com</a>
+                </p>
+            </div>
+
+            <div class="footer-section navigation">
+                <h2>Navigate</h2>
+                <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="shop.html">Our products</a></li>
+                <li><a href="donateus.html">Donate us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section view">
+                <h2>View</h2>
+                <ul>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section editor">
+                <h2>Links for Editor's page</h2>
+                <ul>
+                <li><a href="page_editor.html" target="_blank">Page Editor (Student 1)</a></li>
+                <li><a href="editor_student2.html" target="_blank">Page Editor (Student 2)</a></li>
+				<li><a href="PageEditor3.html" target="_blank">Page Editor (Student 3)</a></li>
+                <li><a href="page_editor4.html" target="_blank">Page Editor (Student 4)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyrighttext">
+            <p>© 2024 Aqua Mart All rights reserved</p>
+        </div>
+	</footer>
+<script>navscript.js</script> <!-- add js for navigation bar and footer -->
+</body>
+<html>
+				
+		
+			

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="home.js" defer></script>
+	
+    <title>AquaMart User Profile</title>
+
+
+    <style>
+      /* Additional styling for the form */
+	  
+      body {
+		background-size: cover; /* Cover the entire header */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Prevent background image from repeating */
+	    background-image: url('bc8.jpg'); /* Set background image */
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4; /* Body background color */
+        margin: 0;
+        padding: 0;
+      }
+	  
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #c3e3eb; /* Form background color */
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 200px;
+        height: auto;
+      }
+      .prompt {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .input-field {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+      }
+      .btn {
+        background-color: #3867d6;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .btn:hover {
+        background-color: #45aaf2;
+      }
+      .skip-btn {
+        background-color: #3867d6;
+      }
+      .skip-btn:hover {
+        background-color: #45aaf2;
+      }
+      .progress {
+        background-color: #ddd;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        overflow: hidden;
+      }
+      .bar {
+        width: 0;
+        height: 20px;
+        background-color: #4CAF50;
+      }
+      .completion {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+	  
+      h2 {
+        color: #273c75; /* H2 headings color */
+      }
+	  
+	  /* Navigation bar styles */
+        header {
+            
+            color: #fff; /* Text color */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #f8f9fa; /* Footer background color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #273c75; /* H2 headings color */
+			text-align:center;
+        }
+
+        /* Additional styles from user profile header */
+        .logo {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .donate-btn {
+            background-color: #3867d6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .donate-btn:hover {
+            background-color: #45aaf2;
+        }
+
+        .team-btn {
+            background-color: #3867d6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .team-btn:hover {
+            background-color: #45aaf2;
+        }
+		
+		.contact-btn{
+            background-color: #3867d6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+		
+		.contact-btn:hover {
+            background-color: #45aaf2;
+        }
+		
+		.product-button:first-child {
+			text-decoration: none;
+			width: calc(5000% - 1in); 
+			margin-right: 0.5in; 
+			margin-left:0.001in; 
+		}
+
+		.product-button:last-child {
+			text-decoration: none;
+			width: calc(5000% - 1in);
+			margin-left: 0.5in; 
+			margin-right:0.001in; 
+		}
+		
+		 /* Style for the input[type="file"] */
+        .custom-file-input {
+            color: #fff; /* Text color */
+            background-color: #3867d6; /* Background color */
+            border: black;
+            padding: 5px 10px; /* Padding */
+            border-radius: 10px; /* Border radius */
+            cursor: pointer; /* Cursor style */
+            font-size: 16px; /* Text size */
+        }
+
+        /* Hide the default file input button */
+        input[type="file"] {
+            display: none;
+        }
+
+        /* Optional: Style for the file name display */
+        .file-name {
+            margin-top: 10px; /* Margin */
+            color: #555; /* Text color */
+            font-size: 14px; /* Text size */
+        }
+		
+		#outputProfilePicture {
+			width: 100px; 
+			height: auto; 
+		}
+
+		:root {
+    --gradient-start: #DFFFFD;    /* Start from white */
+    --gradient-light-blue: #c4f5f1; /* Light blue shade */
+    --gradient-middle: #5295f4;   /* Darker blue shade */
+    --gradient-end: #2d7bf8;      /* More darker blue shade */
+    --hover-color: #131414;       /* Color for text on hover */
+    --hover-scale: 1.1;           /* Scale factor for hover */
+    --active-color: #d8dbf3;       /* Color for text on active */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-size: 18px;
+    background-color: #f4f4f4; /* Soft background color */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-light-blue), var(--gradient-middle), var(--gradient-end));
+    height: 10vh;
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    top: 0; /* This specifies that the header will stick to the top of the page */
+    z-index: 1000; /* This ensures that the header will stay above all other elements on the page */
+}
+
+
+.logo {
+    width: auto; 
+    height: 100%;
+}
+
+.navbar {
+    display: flex;                  /*display blocks with flexible horizontal alignment*/ 
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content:flex-end;
+}
+.navbar a, .navbar button {         /*Style anchor tags and button in nav bar*/
+    margin: 0 10px; 
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background: none;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 22px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;;
+}
+
+.navbar a:hover, .navbar button:hover {    /* Change the color of links on hover */
+    background-color: var(--gradient-end);
+    color: var(--hover-color); 
+    transform: scale(var(--hover-scale)); /* Grow the text size */
+}
+
+.navbar a.active {    /* Add an active class to highlight the current page */
+    background-color: var(--gradient-end);
+    color: var(--active-color); 
+    transform: scale(var(--hover-scale)); /* Grow the text size */
+}
+
+/* Hide the link that should open and close the navbar on small screens */
+.navbar .icon {
+    display: none;
+}
+
+/* footer */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+    justify-content: flex-start; /* Align the content to the start of the container */
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-branding {
+    flex: 0 0 250px; 
+    margin-right: 2rem; /* Space between branding and navigation */
+    padding: 1rem; 
+    box-sizing: border-box;
+}  
+  
+.footer-branding .footer-logo {
+    max-width: 100px; /* Adjust the size of the logo */
+    margin-bottom: 10px;
+}
+  
+.footer-contact {
+    font-size: 0.9em; 
+}
+  
+.footer-contact a {
+    color: white; /* Ensures the email link matches the rest of the text */
+    text-decoration: none; /* Removes underline from the link */
+}
+  
+.footer-contact a:hover {
+    text-decoration: underline; /*Adds underline on hover for the link */
+}
+
+
+.footer-section {
+    flex: 1; /* Each section will grow to fit available space */
+    margin-right: 150px; /* Space between sections, adjust as needed */
+    min-width: 160px; /* Minimum width of each section */
+}
+
+.footer-section h2 {
+    font-size: 1.5em; 
+    color: white; 
+    margin-bottom: 0.5em; /* Spacing below headings */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding-left: 0; 
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white; 
+    padding: 5px 0; /* Padding for touch targets */
+    display: block; /* Make link width to parent container */
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline; 
+}
+
+
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #3585fc;            
+    display: flex;                    /*allows for more flexible arrangements of the content(horizontal alignment).*/ 
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);    /*wave image for animations in footer*/
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 0;
+    animation: animateWave-02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave-02 3s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave-02 3s linear infinite;
+}
+
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave-02 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+.copyrighttext {
+    color: white; 
+    width: 100%; 
+    text-align: center; 
+    padding: 10px 0; 
+    margin-bottom: 10px;
+    position: relative; /* For z-index context */
+    z-index: 10; /* Above waves */
+    font-size: 20px; 
+}   
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    /*hide all links, except for the "Home". Show the link that contains should open and close the navbar (.icon) */
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+
+    /*display the links vertically instead of horizontally*/
+    .navbar.responsive {position: relative;}
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    
+    .footer-container {
+        justify-content: center; /* Center the content on smaller screens */
+        padding: 20px 10px; /* Adjust padding for small screens */
+    }
+    
+    .footer-branding {
+        flex-basis: 100%; /* Branding takes full width on small screens */
+        order: -1; /* Branding goes to the top */
+        margin-right: 0; /* Reset margin on small screens */
+        text-align: center; /* Center text for branding on small screens */
+    }
+    
+    .footer-section {
+        flex-basis: auto; /* Allows the section to grow or shrink */
+        margin-right: 0; /* Removes the margin for small screens */
+        text-align: center; /* Center text for each section on small screens */
+    }
+
+	.waves {
+		display: none; 
+	}
+}
+	</style>
+	
+</head>
+
+<body>
+
+  <!-- Navigation bar -->
+    <header>
+        <img class="logo" src="logo.jpg" alt="Aqua Mart Logo">
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="about.html">About us</a>
+            <a href="shop.html">Products</a>
+            <a href="donateus.html">Donate us</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactus.html">Contacts</a>
+            <a href="profile.html" class="active">Login</a>
+        </nav>
+    </header>   
+
+  <div class="container">
+    <h2>My Profile</h2><br>
+  
+    <div class="steps">
+    <div id="step1">
+        <h3>Question 1/3</h3><br>
+        <p class="prompt">Please enter your first name:</p>
+        <input type="text" id="fname" class="input-field">
+        <p class="prompt">Please enter your last name:</p>
+        <input type="text" id="lname" class="input-field">
+        <p class="prompt">Please upload your profile picture:</p>
+        <label for="profilePictureInput" class="custom-file-input">Choose File</label>
+        <input type="file" id="profilePictureInput" accept="image/*" class="input-field">
+        <br><br>
+        <button onclick="nextStep(1)" class="btn">Next</button>
+        <button onclick="skipStep(1)" class="btn skip-btn">Skip</button><br><br><br>
+        <div>
+            <!-- Progress bar for step 1 -->
+            <div class="progress">
+                <div class="bar" id="progressBar1" style="width: 0%;"></div>
+            </div>
+            <p class="completion" id="completionText1">0% Complete</p>
+        </div>
+    </div>
+
+    <div id="step2" style="display: none;">
+        <h3>Question 2/3</h3><br>
+        <p class="prompt">Please enter your email:</p>
+        <input type="email" id="email" class="input-field">
+        <p class="prompt">Please enter your password:</p>
+        <input type="password" id="password" class="input-field" required>
+        <button onclick="nextStep(2)" class="btn">Next</button>
+        <button onclick="skipStep(2)" class="btn skip-btn">Skip</button><br><br><br>
+        <div>
+            <!-- Progress bar for step 2 -->
+            <div class="progress">
+                <div class="bar" id="progressBar2" style="width: 33%;"></div>
+            </div>
+            <p class="completion" id="completionText2">33% Complete</p>
+        </div>
+    </div>
+
+    <div id="step3" style="display: none;">
+        <h3>Question 3/3</h3><br>
+        <p class="prompt">Please enter your address:</p>
+        <input type="text" id="address" class="input-field">
+        <button onclick="nextStep(3)" class="btn">Next</button>
+        <button onclick="skipStep(3)" class="btn skip-btn">Skip</button><br><br><br>
+        <div>
+            <!-- Progress bar for step 3 -->
+            <div class="progress">
+                <div class="bar" id="progressBar3" style="width: 66%;"></div>
+            </div>
+            <p class="completion" id="completionText3">66% Complete</p>
+        </div>
+    </div>
+
+    <div id="userOutput" style="display: none;">
+       
+		<img id="outputProfilePicture" src="placeholder.jpg" alt="Profile Picture"><br><br>
+    <p>Name: <span id="outputName"></span></p><br>
+    <p>Email: <span id="outputEmail"></span></p><br>
+    <p>Address: <span id="outputAddress"></span></p><br><br>
+
+    <!-- Progress bar for user output -->
+    <div class="progress">
+        <div class="bar" id="progressBar4" style="width: 100%;"></div>
+    </div>
+    <p class="completion" id="completionText4">Profile Completed</p>
+</div>
+
+    </div>
+</div>
+
+  <br><br><br><br><br><br><br>
+
+<script>
+
+
+		function myFunction() {
+    var x = document.getElementById("mynavbar");
+    
+    if (x.className === "navbar") {
+      x.className += " responsive";
+    } else {
+      x.className = "navbar";
+    }
+  }
+	
+
+    var currentStep = 1;
+
+    function nextStep(step) {
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var email = document.getElementById("email").value;
+        var address = document.getElementById("address").value;
+        var password = document.getElementById("password").value;
+        var profilePicture = document.getElementById("profilePictureInput").files[0];
+
+        if (step == 1) {
+            document.getElementById("step1").style.display = "none";
+            document.getElementById("step2").style.display = "block";
+            document.getElementById("progressBar1").style.width = "33%";
+            document.getElementById("completionText1").innerHTML = "33% Complete";
+            document.getElementById("outputName").innerHTML = fname + " " + lname;
+            if (profilePicture) {
+                document.getElementById("outputProfilePicture").src = URL.createObjectURL(profilePicture);
+            }
+        } else if (step == 2) {
+            document.getElementById("step2").style.display = "none";
+            document.getElementById("step3").style.display = "block";
+            document.getElementById("progressBar2").style.width = "66%";
+            document.getElementById("completionText2").innerHTML = "66% Complete";
+            document.getElementById("outputEmail").innerHTML = email;
+        } else if (step == 3) {
+            document.getElementById("step3").style.display = "none";
+            document.getElementById("userOutput").style.display = "block";
+            document.getElementById("progressBar3").style.width = "100%";
+            document.getElementById("completionText3").innerHTML = "100% Complete";
+            document.getElementById("outputAddress").innerHTML = address;
+        }
+
+        currentStep = step;
+    }
+
+    function skipStep(step) {
+        nextStep(step + 1);
+    }
+
+    function goBack() {
+        if (currentStep == 1) {
+            // Do nothing, already at the first step
+        } else if (currentStep == 2) {
+            document.getElementById("step1").style.display = "block";
+            document.getElementById("step2").style.display = "none";
+            document.getElementById("progressBar1").style.width = "0%";
+            document.getElementById("completionText1").innerHTML = "0% Complete";
+        } else if (currentStep == 3) {
+            document.getElementById("step2").style.display = "block";
+            document.getElementById("step3").style.display = "none";
+            document.getElementById("progressBar2").style.width = "33%";
+            document.getElementById("completionText2").innerHTML = "33% Complete";
+        }
+
+        currentStep -= 1;
+    }
+
+    // Triggered when file input changes
+    document.getElementById("profilePictureInput").addEventListener("change", function() {
+        var profilePicture = document.getElementById("profilePictureInput").files[0];
+        var outputProfilePicture = document.getElementById("outputProfilePicture");
+        outputProfilePicture.src = URL.createObjectURL(profilePicture);
+    });
+
+</script>
+
+    <!-- Footer -->
+<footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+
+        <div class="footer-container">
+            <!-- Footer Branding Section -->
+            <div class="footer-branding">
+                <img src="logo.jpg" alt="Aqua Mart Logo" class="footer-logo">
+
+                <p class="footer-contact">
+                <strong>72/2, Vajira Road,<br> Colombo 007,<br> Sri Lanka.</strong><br>
+                Phone: 0112226444<br>
+                Email: <a href="mailto:aquamart@gmail.com">aquamart@gmail.com</a>
+                </p>
+            </div>
+
+            <div class="footer-section navigation">
+                <h2>Navigate</h2>
+                <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="shop.html">Our products</a></li>
+                <li><a href="donateus.html">Donate us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section view">
+                <h2>View</h2>
+                <ul>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section editor">
+                <h2>Links for Editor's page</h2>
+                <ul>
+                <li><a href="page_editor.html" target="_blank">Page Editor (Student 1)</a></li>
+                <li><a href="editor_student2.html" target="_blank">Page Editor (Student 2)</a></li>
+				<li><a href="PageEditor3.html" target="_blank">Page Editor (Student 3)</a></li>
+                <li><a href="page_editor4.html" target="_blank">Page Editor (Student 4)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyrighttext">
+            <p>© 2024 Aqua Mart All rights reserved</p>
+        </div>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .page-editor, .user-profile, .team, .about {
+            border: 2px solid #3867d6;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background-color: #dfe6e9; /* Light blue background color */
+            text-align:center;
+        }
+
+        .page-editor h1, .user-profile h2, .team h2, .about h2 {
+            color: #273c75;
+            text-align:center;
+        }
+
+        .user-profile-btn, .team-btn, .about-btn {
+            background-color: #3867d6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block; 
+            text-align:center;
+        }
+
+        .user-profile-btn:hover, .team-btn:hover, .about-btn:hover {
+            background-color: #45aaf2;
+        }
+
+        p {
+            margin-top: 20px;
+            color: #555;
+        }
+        
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; 
+            pointer-events: none; 
+            background-size: cover;
+            background-position: center; 
+        }
+		
+
+		.scroll-btn {
+			background-color: #3867d6;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			font-size: 16px;
+			text-decoration: none;
+			display: inline-block;
+			margin-bottom: 20px;
+		}
+
+		.scroll-btn:hover {
+			background-color: #45aaf2;
+		}
+
+
+    </style>
+</head>
+<body>
+<img src="bc8.jpg" alt="Outer Image" class="background-image">
+<a href="#bottom" class="scroll-btn">Jump To Bottom</a>
+<div class="page-editor">
+    <h1>Page Editor</h1>
+    <h3>Govini Vimaya Rajapakse</h3>
+    <p>Role:Student 3</p>
+    <p>IIT Student ID: 20232420</p>
+    <p>UOW ID: w2053511</p>
+    <p style="color: black;"><b><i>The following web pages were created by me!</i></b></p>
+
+</div>
+
+<div class="user-profile">
+    <h2>User Profile</h2>
+    <p>I created User Profile using html, CSS and JavaScript.<br>I used JavaScript to go through the steps in User Profile.<br>Added a progression bar using JavaScript.<br>
+    I linked the navigation bar and footer that were created by Student 2.<br> I linked User Profile page to the navigation bar Login button.</p>
+    <a href="profile.html" class="user-profile-btn">Go to User Profile</a> 
+</div>
+
+<div class="team">
+    <h2>Team</h2>
+    <p>I created team page using html and CSS<br> I linked team page by a button in About Us page</p>
+    <a href="team.html" class="team-btn">Meet our team</a> 
+</div>
+
+<div class="about">
+    <h2>Content Page</h2>
+    <p>I created About Us page as my content page by using html and CSS.<br>I linked the navigation bar and footer that were created by Student 2.<br>
+    I linked About Us page to the navigation bar About Us button.</p> 
+    <a href="about.html" class="about-btn">About Us</a> 
+    
+</div>
+<a href="#top" class="scroll-btn">Back To The Top</a>
+<div id="bottom"></div>
+</body>
+</html>

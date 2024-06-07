@@ -1,0 +1,104 @@
+#container {
+  max-width: 2000px; /* adjust web page width */
+  padding: 30px;
+  margin-bottom: 80px; /* add space between body and footer */
+}
+
+h2 {
+  text-align: center; /* topic adjust in center */
+  color: #1F456E; /* add aehean color for topic */
+  padding: 10px; /* add space between heading topic and descriptive paragraph */
+}
+
+.txt-container {
+  text-align: center; /* center the paragraph */
+  color: #281E5D; /* adding slate color for paragraph font */
+}
+
+h3 {
+  padding: 10px; /* add space */
+   font-size: 22px; /* Adjust font size as needed */
+}
+
+#method-container {
+  width: 80%; /* Adjust method container width */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add padding for spacing */
+  margin-bottom: 15px;/*add space between containers*/
+}
+
+.method1, .method2, .method3, .method4, .method5, .method6 {
+  background-color:#48AAAD; /* set tael color for the background */
+  border: 1px solid #ddd; /* Add border */
+  border-radius: 10px; /* Add rounded corners */
+  padding: 10px; /* Add padding for spacing */
+}
+
+.method1 .system , .method2 .system , .method3 .system , .method4 .system , .method5 .system , .method6 .system {
+  font-size: 26px; /* Adjust font size as needed */
+  color: #333; /* Set text color */
+  margin-bottom: 10px; /* Add margin for spacing below heading */
+}
+
+.method1 p,
+.method2 p,
+.method3 p, 
+.method4 p, 
+.method5 p, 
+.method6 p {
+  font-size: 22px; /* Adjust font size as needed */
+  line-height: 1.6; /* Set line height for readability */
+  margin-bottom: 10px; /* Add margin for spacing below paragraphs */
+}
+
+.method1 .img-container{
+  width: 350px; /* Adjust image width as needed */
+  display: block; /* Ensure images are displayed as block elements */
+  margin: 20px auto; /* Center images horizontally and add margin for spacing */
+}
+.method2 .img-container{
+	width: 350px; /* Adjust image width as needed */
+	display: block; /* Ensure images are displayed as block elements */
+	margin: 20px auto; /* Center images horizontally and add margin for spacing */
+}
+.method3 .img-container{
+		width: 350px; /* Adjust image width as needed */
+		display: block; /* Ensure images are displayed as block elements */
+		margin: 20px auto; /* Center images horizontally and add margin for spacing */
+}
+.method4 .img-container{
+	width: 350px; /* Adjust image width as needed */
+	display: block; /* Ensure images are displayed as block elements */
+	margin: 20px auto; /* Center images horizontally and add margin for spacing */
+}
+.method5 .img-container{
+		width: 350px; /* Adjust image width as needed */
+		display: block; /* Ensure images are displayed as block elements */
+		margin: 20px auto; /* Center images horizontally and add margin for spacing */
+}
+.method6 .img-container{
+		width: 350px; /* Adjust image width as needed */
+		display: block; /* Ensure images are displayed as block elements */
+		margin: 20px auto; /* Center images horizontally and add margin for spacing */
+}
+
+.method1 .about-process, .method2 .about-process, .method3, .method4 .about-process, .method5 .about-process, .method6 .about-process {
+  font-size: 16px; /* Adjust font size as needed */
+  line-height: 1.6; /* Set line height for readability */
+  margin-bottom: 20px; /* Add margin for spacing below list */
+  padding-left: 20px; /* Add left padding to list items */
+}
+
+.method1 .about-process li, .method2 .about-process li, .method3 .about-process li, .method4 .about-process li, .method5 .about-process li, .method6 .about-process li{
+  list-style-type: disc; /* Set list style type to bullets */
+  color: #0A1172; /* Set text color */
+   font-size: 18px; /* Adjust font size as needed */
+}
+
+.machine{
+	text-align:center;
+	color:#016064;
+}
+h4{
+	font-size:24px;
+}

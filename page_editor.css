@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+	padding:1px;
+	background-color:#C6DEFF;
+}
+
+.btn {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+	align:left;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.page-editor {
+    margin-bottom:80px;
+}
+
+.page-editor h1 {
+    font-size: 24px;
+	text-align:center;
+}
+
+.page-editor h3 {
+    font-size: 20px;
+    margin-top: 10px;
+	text-align:center;
+}
+
+.page-editor p {
+    font-size: 16px;
+    margin-top: 5px;
+	text-align:center;
+}
+
+.task1,
+.task2,
+.task3{
+    margin-top: 5%;
+	margin-bottom:5%;
+	height:250px;
+	text-align:center;
+	background-color:#78C7C7;
+	padding:10px;
+	margin-left:5%;
+	margin-right:5%;
+	
+}
+
+.task1,
+.task2,
+.task3 h3 {
+    font-size: 20px;
+}
+
+.task1,
+.task2,
+.task3 p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.icon {
+    margin-top: 10px;
+	margin-bottom:5px;
+}
+
+.icon img {
+    width: 100px;
+    height:100px;
+}

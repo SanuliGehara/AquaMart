@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Types</title>
+
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css"> <!--common template css file-->
+  <link rel="stylesheet" href="water_types.css"> <!-- Linking the stylesheet -->
+  <script src="water_types.js" defer></script>
+</head>
+
+<body>
+  <!--Navigaion bar-->
+  <header>
+    <img class="logo" src="image/logo.jpg" alt="Aqua Mart Logo">
+    <nav class="navbar" id="mynavbar">
+      <a href="home.html" >Home</a>
+      <a href="about.html">About us</a>
+      <a href="shop.html">Products</a>
+      <a href="donateus.html">Donate us</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contactus.html">Contacts</a>
+      <a href="profile.html">Login</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <!--menu icon-->
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+  </header>
+
+  <main> <!--Using main container for the main body content to get a space before the footer waves-->
+    <div class="water-page">
+      <div class="slideshow-container">
+        <!-- Full-width slides-->
+        <div class="mySlides fade">
+          <div class="row">
+            <div class="column image-side">
+              <img src="image/mineral.jpg" alt="Mineral Water" style="width:100%">
+            </div>
+            <div class="column content-side">
+              <h1>Mineral Water</h1>
+              <p>Our mineral water is sourced from pristine springs where it collects essential minerals and trace
+                elements that give it its unique taste and health benefits.</p>
+              <button class="btn" onclick="location.href='#more-info-mineral-water'">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="row">
+            <div class="column image-side">
+              <img src="image/spring.png" alt="Spring Water" style="width:100%">
+            </div>
+            <div class="column content-side">
+              <h1>Spring Water</h1>
+              <p>Welcome to our natural spring water - straight from the untouched beauty of nature. Our spring water
+                comes from carefully inspected and monitored sources, supervised by licensed geologists to ensure high
+                quality.</p>
+              <button class="btn" onclick="location.href='#more-info-spring-water'">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="row">
+            <div class="column image-side">
+              <img src="image/disitilled.jpg" alt="Distilled Water" style="width:100%">
+            </div>
+            <div class="column content-side">
+              <h1>Distilled Water</h1>
+              <p>Distilled water is made by boiling regular water, collecting steam and cooling it back to liquid
+                form.If
+                you're looking for pure water, this is the choice for you.</p>
+              <button class="btn" onclick="location.href='#more-info-distilled-water'">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mySlides fade">
+          <div class="row">
+            <div class="column image-side">
+              <img src="image/purified.jpg" alt="Purified Water" style="width:100%">
+            </div>
+            <div class="column content-side">
+              <h1>Purified Water</h1>
+              <p>Discover our purified water, produced by distillation, deionization, and reverse-osmosis. This
+                comprehensive process effectively removes pollutants, bacteria, and chemicals, ensuring it meets
+                high-quality standards for cleanliness and safety.</p>
+              <button class="btn" onclick="location.href='#more-info-purified-water'">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="row">
+            <div class="column image-side">
+              <img src="image/alkaline.png" alt="Alkaline Water" style="width:100%">
+            </div>
+            <div class="column content-side">
+              <h1>Alkaline Water</h1>
+              <p>Alkaline water is known for its slightly higher pH level, giving it a less acidic taste and potential
+                health benefits. Plus, our alkaline water has a clean taste that's refreshing and satisfying.
+                <button class="btn" onclick="location.href='#more-info-alkaline-water'">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="row">
+            <div class="column image-side">
+              <img src="image/sparkling.jpg" alt="Sparkling Water" style="width:100%">
+            </div>
+            <div class="column content-side">
+              <h1>Sparkling Water</h1>
+              <p>Treat yourself to our bubbly sparkling water - a fun twist on staying hydrated. Perfect for any
+                occasion,
+                whether you're enjoying it on its own or using it as a mixer in cocktails and mocktails.
+                <button class="btn" onclick="location.href='#more-info-alkaline-water'">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Dots for navigation in slideshow -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <!--Intro section for types of water-->
+      <div class="intro-section">
+        <h2 class="intro-title">Our different types of Water</h2>
+        <p class="intro-text">
+          Welcome to our water world! We believe water isn't just a basic need - it's essential for a healthy life.
+          That's
+          why we offer a diverse range of water types each with its own unique characteristics and benefits. Whether
+          you're looking for super clean water, water with extra minerals, or bubbly water that's fun to drink, we've
+          got
+          it all. Take a look around and find the perfect water for you!
+        </p>
+      </div>
+
+
+      <div id="more-info-mineral-water" class="detailed-info">
+        <div class="info-text">
+          <h2>Mineral Water</h2>
+          <p>Mineral water is nature's gift, rich in minerals and free from artificial substances. Drinking our mineral
+            water means you're providing your body with essential electrolytes that are often lost during physical
+            activities. It's a hydrating choice, perfect for any time of the day.We carefully collect this water,
+            ensuring
+            its purity remains intact every step of the way.<br><br>
+            With every sip, you're not just hydrating; you're giving your body a boost of essential nutrients. Plus, our
+            mineral water has a clean taste that's refreshing and satisfying.
+            our mineral water is treated with care, without any artificial additives makes it a perfect choice for
+            staying
+            hydrated and feeling great, whether at the gym, picnic, or during the day.
+          </p>
+        </div>
+        <div class="info-image">
+          <img src="image/mineralMoreinfo.jpeg" alt="Mineral Water">
+        </div>
+      </div>
+
+      <div id="more-info-spring-water" class="detailed-info">
+        <div class="info-image">
+          <img src="image/springMoreinfo.jpeg" alt="Spring Water">
+        </div>
+        <div class="info-text">
+          <h2>Spring Water</h2>
+          <p>Our spring water comes from carefully inspected and monitored sources, supervised by licensed geologists to
+            ensure high quality. With its natural filtration process it is enriched with minerals, offering a refresing
+            taste. <br><br>Additionally, our spring water is typically free from pollutants found in surface water.
+            Drinking spring water can offer you numerous benefits, as it's free from chemicals or additives. It can
+            contribute to your daily mineral intake, supporting overall health and hydration.
+          </p>
+        </div>
+      </div>
+
+      <div id="more-info-distilled-water" class="detailed-info">
+        <div class="info-text">
+          <h2>Distilled Water</h2>
+          <p>Distilled water is made by boiling regular water, collecting steam and cooling it back to liquid form.This
+            process effectively removes impurities and minerals, ensuring that our distilled water is free from
+            contaminants. As a result, it's the perfect choice for sensitive applications like medical devices and
+            laboratory experiments. <br><br>
+            Why choose distilled water? It's simple - because it's the cleanest option available, with no added
+            chemicals
+            or minerals. If you're looking for pure water, this is the choice for you.
+            Additionally, Disitilled water is ideal for cooking, preparing hot beverages, steam irons, humidifiers and
+            even for those following low-sodium diets.
+          </p>
+        </div>
+        <div class="info-image">
+          <img src="image/DistilledMoreInfo.jpeg" alt="Distilled Water">
+        </div>
+      </div>
+
+      <div id="more-info-purified-water" class="detailed-info">
+        <div class="info-image">
+          <img src="image/PurifiedMoreInfo.jpg" alt="Purified Water">
+        </div>
+        <div class="info-text">
+          <h2>Purified Water</h2>
+          <p>Discover our purified water, produced by distillation, deionization, and reverse-osmosis. This
+            comprehensive
+            process effectively removes pollutants, bacteria, and chemicals, ensuring it meets high-quality standards
+            for
+            cleanliness and safety. <br><br>With its superior purity, our purified water is suitable for various
+            applications,
+            including drinking, cooking, and medical use. Whether you're quenching your thirst, preparing meals, or
+            using it for medical procedures, our purified water
+            ensures reliability and peace of mind.
+          </p>
+        </div>
+      </div>
+
+      <div id="more-info-alkaline-water" class="detailed-info">
+        <div class="info-text">
+          <h2>Alkaline Water</h2>
+          <p>Alkaline water is known for its slightly higher pH level, giving it a less acidic taste and potential
+            health
+            benefits.Our alkaline water is produced through a special process that increases its pH level, making it
+            less
+            acidic and more alkaline. <br><br>
+            Enjoy on its own or as part of your daily routine, our alkaline water offers a refreshing way to stay
+            hydrated. Whether you're working out or simply relaxing, it's a simple and delicious choice for a healthier
+            lifestyle.
+          </p>
+        </div>
+        <div class="info-image">
+          <img src="image/alkalineMoreinfo.jpeg" alt="Alkaline Water">
+        </div>
+      </div>
+
+      <div id="more-info-sparkling-water" class="detailed-info">
+        <div class="info-image">
+          <img src="image/SparklingMoreInfo.jpg" alt="Sparkling Water">
+        </div>
+        <div class="info-text">
+          <h2>Sparkling Water</h2>
+          <p>Treat yourself to our bubbly sparkling water - a fun twist on staying hydrated. Our sparkling water is full
+            of fizzy bubbles
+            that make every sip exciting. Crafted using a process of carbonation, our sparkling water gets its bubbly
+            texture and refreshing taste. It's a great change from plain water.
+            <br><br>Perfect for any occasion, whether you're enjoying it on its own or using it as a mixer in cocktails
+            and mocktails, our sparkling water
+            adds a bit of sparkle to any occasion. Try our sparkling water today and enjoy the fun fizziness - it's
+            refreshing, energizing, and totally irresistible.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--Displaying the footer part of the web page-->
+  <footer>
+    <!--For display the wave in footer-->
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+
+    <div class="footer-container">
+      <!-- Footer Branding Section -->
+      <div class="footer-branding">
+        <img src="image/logo.jpg" alt="Aqua Mart Logo" class="footer-logo">
+        <p class="footer-contact">
+          <strong>72/2, Vajira Road,<br> Colombo 007,<br> Sri Lanka.</strong><br>
+          Phone: 0112226444<br>
+          Email: <a href="mailto:aquamart@gmail.com">aquamart@gmail.com</a>
+        </p>
+      </div>
+
+      <!-- Footer Navigation Section -->
+      <div class="footer-section navigation">
+        <h2>Navigate</h2>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="shop.html">Our products</a></li>
+          <li><a href="donateus.html">Donate us</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer View Section -->
+      <div class="footer-section view">
+        <h2>View</h2>
+        <ul>
+          <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Editor's Section -->
+      <div class="footer-section editor">
+        <h2>Links for Editor's page</h2>
+        <ul>
+          <li><a href="page_editor.html" target="_blank">Page Editor (Student 1)</a></li>
+          <li><a href="editor_student2.html" target="_blank">Page Editor (Student 2)</a></li>
+          <li><a href="PageEditor3.html" target="_blank">Page Editor (Student 3)</a></li>
+          <li><a href="page_editor4.html" target="_blank">Page Editor (Student 4)</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--Copyright text at the bottom of footer-->
+    <div class="copyrighttext">
+      <p>© 2024 Aqua Mart All rights reserved</p>
+    </div>
+  </footer>
+</body>
+
+</html>

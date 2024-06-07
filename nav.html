@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+    <!--Navigaion bar-->
+    <header>
+        <img class="logo" src='logo.jpg' alt="Aqua Mart Logo">
+        <!-- NOTE : How to add  class="active" part in nav bar
+            thamange <a> ... </a> tag eka athule class eka danna "active" kiyala
+            eg:
+                1) Govinige About us page ekata nm, pahala thiyena <a> tag eke
+                About us ekata adaala <a> tag eke class eka,
+                    <a href="about-us.html" class= "active"> About us</a>
+                
+                2) Donate us ekata nm,
+                <a href="donat-us.html" class="active"> Donate us </a>
+
+                me wididyata hama page ekkama adala page eke api nv bar eke link eka dana <a> tag eka 
+                    athulata class eka active kiyala danna. 
+                    ****1 page ekka nav bar eke active kiayala thiyenna puluwn eka <a> tag ekkat witharay. ***
+                        eg: Donate us page eke - nav bar eke, class eka active kiyala thieynna puluwn "Donate us" ekata adala <a> tag ekata withray.
+                        
+                        
+                ***Footer ekath update kala ekath copy paste karaganna. eke editors page wlata
+            target attribute eka damma new tab ekka open wenna-->
+            
+        <nav class="navbar" id="mynavbar">
+            <a href="home.html">Home</a>    
+            <a href="#">About us</a>
+            <a href="#">Products</a>
+            <a href="#">Donate us</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contacts</a>
+            <a href="#">Login</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">  <!--menu icon-->
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>    
+
+    <!--Displaying the footer part of the web page-->
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+
+        <div class="footer-container">
+            <!-- Footer Branding Section -->
+            <div class="footer-branding">
+                <img src='logo.jpg' alt="Aqua Mart Logo" class="footer-logo">
+
+                <p class="footer-contact">
+                <strong>72/2, Vajira Road,<br> Colombo 007,<br> Sri Lanka.</strong><br>
+                Phone: 0112226444<br>
+                Email: <a href="mailto:aquamart@gmail.com">aquamart@gmail.com</a>
+                </p>
+            </div>
+
+            <div class="footer-section navigation">
+                <h2>Navigate</h2>
+                <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Our products</a></li>
+                <li><a href="#">Donate us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section view">
+                <h2>View</h2>
+                <ul>
+                <li><a href="#">Sitemap</a></li>
+                <li><a href="#">Gallery</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section editor">
+                <h2>Links for Editor's page</h2>
+                <ul>
+                <li><a href="#">Page Editor (Student 1)</a></li>
+                <li><a href="#">Page Editor (Student 2)</a></li>
+                <li><a href="#">Page Editor (Student 3)</a></li>
+                <li><a href="#">Page Editor (Student 4)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyrighttext">
+            <p>© 2024 Aqua Mart All rights reserved</p>
+        </div>
+  </footer>
+</body>
+</html>

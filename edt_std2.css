@@ -1,0 +1,109 @@
+:root {
+    --gradient-start: #d2f3f1;    /* Start from white */
+    --gradient-light-blue: #bbebe7; /* Light blue shade */
+    --gradient-middle: #66a1f3;   /* Darker blue shade */
+    --gradient-end: #2d7bf8;      /* More darker blue shade */
+    --hover-color: #0b0c5f;       /* Color for text on hover */
+    --hover-scale: 1.07;           /* Scale factor for hover */
+    --active-color: #d8dbf3;       /* Color for text on active */
+}
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+  
+body {
+    font-size: 18px;
+    background-color: #dbedf8; /* Soft background color */
+    font-family: Arial, sans-serif; 
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.editors-page {
+    display: flex;
+    text-align: center;    
+    margin-top: 20px;
+}
+
+.container h2 {
+    font-size: 1.6em;
+    background-color: #007bff;
+    margin-bottom: 20px;
+}
+
+.editor-info {
+    padding: 40px 20px;
+    background-color: #e0f7ff;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid #e0f7ff;            /* Light blue border */
+    box-shadow: inset 0 0 10px #3f617caa; 
+}
+
+.editor-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.editor-info p {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+/*Style the task blocks*/
+.task {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-light-blue), var(--gradient-middle), var(--gradient-end));
+    border: none;
+    border-radius: 5px;
+    padding: 40px 0;
+    margin: 30px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.task h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #0b0c5f;
+}
+
+.task p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5; /* Spacing between lines for readability */
+}
+
+.task:hover {
+    background-color: var(--gradient-light-blue);
+    color: var(--hover-color); 
+    transform: scale(var(--hover-scale)); /* Grow the text size */
+}
+
+.task-link {
+    padding: 10px 20px; /* padding to make the button larger or smaller */
+    margin-top: 10px;
+    font-size: 16px; 
+    text-decoration: none;
+    color: #ffffff; 
+    background-color: #007bff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    outline: none;    /* Removes the outline to keep it clean on click */
+    transition: background-color 0.3s, transform 0.3s; /* transition for hover effects */
+}
+
+.task-link:hover {
+    background-color: #355ad4;
+    color:var(--hover-color); 
+    transform: scale(1.05); 
+}
+

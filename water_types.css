@@ -1,0 +1,234 @@
+main {
+  margin-bottom: 150px; /*Create more space above the footer */
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Each slide */
+.mySlides {
+  height: 500px; 
+  position: relative;   /* Allows absolute positioning within each slide */
+  overflow: hidden;     /* Prevents content from exceeding the height */
+  display: none;
+  padding: 20px;
+  text-align: left;
+  animation: fade 1.5s;
+  outline: 1px solid #4298b5; /* Adds an outline around each slide */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #409bfd;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots in slideshow */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #3a3636;
+}
+
+/* Fading animation */
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.row {
+  display: flex;
+  align-items: center;    /*centers the content vertically */
+  justify-content: center; /* This centers the content horizontally */
+}
+
+
+/* Responsive columns */
+.column {
+  float: left;
+  height: 100%;
+  width: 50%;
+  padding: 0 20px;
+}
+
+.content-side h1, .content-side p, .content-side .btn {
+  text-align: justify; 
+}
+
+.content-side {
+  overflow-y: auto; /* Adds scroll to the content if it overflows the height */
+  width: 25%;       /* This is 1/4th of the container width */
+  padding: 0 20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This centers the text vertically */
+}
+
+.image-side {
+  width: 75%;     /* This is 3/4th of the container width */
+}
+
+.image-side img {
+  width: auto;    /* Keep the image's aspect ratio */
+  height: 100%;   /* Stretch the image to cover the slide height */
+  object-fit: cover;       /* Ensures the image covers the area without stretching */
+  object-position: center; /* Centers the image within the slide */
+}
+
+.btn {
+  padding: 10px 20px; /* padding to make the button larger or smaller */
+  margin-top: 10px;
+  font-size: 16px; 
+  color: rgb(0, 0, 0); 
+  background-color: #007bff; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  outline: none;    /* Removes the outline to keep it clean on click */
+  transition: background-color 0.3s, transform 0.3s; /* transition for hover effects */
+}
+
+.btn:hover {
+  background-color: #355ad4; 
+  transform: scale(1.05); 
+}
+
+.btn:active {
+  transform: scale(0.95); /* Slightly shrinks the button when clicked */
+}
+
+.intro-section {
+  padding: 40px 20px;
+  background-color: #e0f7ff;
+  text-align: center;
+  margin-top: 20px;
+  border: 2px solid #e0f7ff;            /* Light blue border */
+  box-shadow: inset 0 0 10px #3f617caa; /* Inner shadow with a blue tint */
+}
+
+.intro-title {
+  font-size: 28px; /* Size of the title */
+  color: #273c75;
+  margin-bottom: 20px; /* Spacing between title and paragraph */
+}
+
+.intro-text {
+  font-size: 20px; /* Size of the paragraph text */
+  line-height: 1.6; /* Spacing between lines for readability */
+  color: #000000; 
+  max-width: 800px; /* Maximum width of the text */
+  margin: auto;     /* Centers the text block in the section */
+}
+
+.detailed-info {
+  background-color: #e0f7ff; /* Light blue background */
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* This will allow items to wrap onto the next line on smaller screens */
+  gap: 20px;        /* This adds space between the image and text */
+  margin-top: 40px; /* Space between sections */
+  align-items: center; /* Vertical alignment */
+  justify-content: space-between; /* Horizontal alignment */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow for depth */
+}
+
+.alternate-layout {
+  flex-direction: row-reverse; /* This will reverse the order of flex items */
+}
+
+.detailed-info > .info-image, .detailed-info > .info-text {
+  flex: 1; /* Each child will take up an equal amount of space */
+}
+
+.detailed-info > .info-image {
+  max-width: 50%; /* Limiting image width */
+}
+
+.detailed-info > .info-text {
+  max-width: 50%; /* Limiting text width */
+}
+
+.info-image, .info-text {
+  flex: 1;
+}
+
+.info-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.info-text {
+  padding: 0 20px;
+}
+
+.info-text h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.info-text p {
+  font-size: 17px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .intro-text {
+    padding: 0 10px; /* Reduces the padding on smaller screens */
+  }
+
+  .detailed-info {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .prev, .next, .text {
+    font-size: 11px
+  }
+  
+  .image-side, .content-side {
+    width: 100%; /* Stacks the image and content on top of each other on small screens */
+    padding: 0 20px;
+  }
+}

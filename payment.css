@@ -1,0 +1,67 @@
+body {
+	background-image:url('image/shop.jpg');/*add background image*/
+	margin: 0;
+	padding: 0;
+}
+.container {
+  max-width: 800px;
+  margin-top: 50px;
+  margin-bottom:140px;
+  margin-left:350px;
+  padding: 20px;
+  background-image:url('image/payment.jpg')/*add background image for payment form*/
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.required {
+  color: red;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"],
+button[type="button"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #0056b3;
+}
+.back-to-cart {
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.back-to-cart:hover {
+  background-color: #999;
+}
+
+	
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="gallerystyle.css">
+  <script src="gallery.js" defer></script>
+</head>
+
+<body>
+  <!--Navigaion bar-->
+  <header>
+    <img class="logo" src="image/logo.jpg" alt="Aqua Mart Logo">
+
+
+    <nav class="navbar" id="mynavbar">
+      <a href="home.html" >Home</a>
+      <a href="about.html">About us</a>
+      <a href="shop.html">Products</a>
+      <a href="donateus.html">Donate us</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contactus.html">Contacts</a>
+      <a href="profile.html">Login</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <!--menu icon-->
+        <i class="fa fa-bars"></i>
+      </a>
+    </nav>
+  </header>
+
+  <h1>
+    <center><b><i>Image Gallery</i></b></center>
+  </h1>
+  <div class="gallery-container">
+    <img src="image3.jpg" alt="Image 1"
+      data-details="A refreshing glass of clean water is a great way to showcase the end result of what a water cleaning company can do.">
+    <img src="image2.jpg" alt="Image 2"
+      data-details="The image shows two glasses of water, side-by-side, with one glass containing dirty water and the other containing clear water.">
+    <img src="image20.png" alt="Image 3"
+      data-details="This graphic illustrates various types of drinking water available to meet your hydration needs.">
+    <img src="image11.jpg" alt="Image 4"
+      data-details="Our multi-step purification process ensures clean and safe drinking water for your family.">
+    <img src="image14.jpg" alt="Image 5"
+      data-details="Chlorine disinfection helps us deliver safe drinking water to your home.">
+    <img src="image4.jpg" alt="Image 6"
+      data-details="Crystal-clear water and advanced sanitation - the foundation for a healthy and vibrant community">
+    <img src="image5.jpg" alt="Image 7"
+      data-details="Our sanitation water keeps your home clean and your family healthy.">
+    <img src="image17.jpg" alt="Image 8"
+      data-details="Committed to quality: Ensuring your water is safe every step of the way.">
+    <img src="image18.jpg" alt="Image 9"
+      data-details="From source to tap, we ensure every drop meets the highest standards.">
+    <img src="image12.jpg" alt="Image 10"
+      data-details="This infographic illustrates the multi-step process a water treatment facility uses to turn raw water into clean, safe drinking water for your home.">
+    <img src="image6.png" alt="Image 11"
+      data-details="Our fresh, filtered water keeps your employees refreshed and ready to refill your company's potential.">
+    <img src="image13.jpg" alt="Image 12"
+      data-details="We are dedicated to providing clean, safe, and reliable water essential for life.">
+  </div>
+  <div id="popup" class="hidden">
+    <div id="popup-content"> <img id="popup-image" src="" alt="Popup Image">
+      <p id="popup-details"></p>
+      <button id="close-popup">Close</button>
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!--Displaying the footer part of the web page-->
+  <footer>
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+
+    <div class="footer-container">
+      <!-- Footer Branding Section -->
+      <div class="footer-branding">
+          <img src="image/logo.jpg" alt="Aqua Mart Logo" class="footer-logo">
+          <p class="footer-contact">
+              <strong>72/2, Vajira Road,<br> Colombo 007,<br> Sri Lanka.</strong><br>
+              Phone: 0112226444<br>
+              Email: <a href="mailto:aquamart@gmail.com">aquamart@gmail.com</a>
+          </p>
+      </div>
+
+       <!-- Footer Navigation Section -->
+      <div class="footer-section navigation">
+          <h2>Navigate</h2>
+          <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="shop.html">Our products</a></li>
+              <li><a href="donateus.html">Donate us</a></li>
+          </ul>
+      </div>
+
+       <!-- Footer View Section -->
+      <div class="footer-section view">
+          <h2>View</h2>
+          <ul>
+              <li><a href="sitemap.html">Sitemap</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+      </div>
+
+       <!-- Footer Editor's Section -->
+      <div class="footer-section editor">
+          <h2>Links for Editor's page</h2>
+                <ul>
+                <li><a href="page_editor.html" target="_blank">Page Editor (Student 1)</a></li>
+                <li><a href="editor_student2.html" target="_blank">Page Editor (Student 2)</a></li>
+				<li><a href="PageEditor3.html" target="_blank">Page Editor (Student 3)</a></li>
+                <li><a href="page_editor4.html" target="_blank">Page Editor (Student 4)</a></li>
+                </ul>
+      </div>
+    </div>
+    <div class="copyrighttext">
+      <p>© 2024 Aqua Mart All rights reserved</p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

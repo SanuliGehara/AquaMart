@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+	
+	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="shop.css" rel="stylesheet" type="text/css"> <!-- link css file of shop-->
+	<link href="nav.css"  rel="stylesheet" type="text/css"><!--link css file of navigation barand footer-->
+</head>
+<body>
+  <!--Navigaion bar-->
+    <header>
+        <img class="logo" src="image/logo.jpg" alt="AquaMart-Logo">
+        <nav class="navbar" id="mynavbar">
+            <a href="home.html">Home</a>    
+            <a href="about.html">About us</a>
+            <a href="shop.html" class="active">Product</a> <!-- activate product link in navigation bar -->
+            <a href="donateus.html">Donate us</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactus.html">Contacts</a>
+            <a href="profile.html">Login</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">  <!--menu icon-->
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>    
+	<main> <!--add main container for get space before the footer wave-->
+		<div id="container"> <!-- add div container for adjust web page size-->
+			<div class="shopSection">
+				<h2 class="caption">Discover our latest products now!</h2>
+					<div class="product-list">
+						
+						<!--add container for 250ml bottles-->
+						<div class="product-item">
+							<img src="image/250-ml.jpg"  alt="250">
+							<h3>250ml Bottle</h3>
+								<p class="price" data-price="10">price:$0.50</p>
+								<div class="quantity">
+									<button class="quantity-btn-decrement">-</button><!-- decrement button for decrease product quantity-->
+									<input type="text" class="input" value="1" readonly>
+									<button class="quantity-btn-increment">+</button> <!-- increment button for increase product quantity-->
+								</div>
+								<div class="size">
+									<p>Select type:</p>
+								</div>
+								<select class="type-select"> <!--add select tag for select the user choice-->
+									<option value=" Mineral Water" data-price="0.50"> Mineral Water</option>
+									<option value=" Purified Water" data-price="1.00"> Purified Water</option>
+									<option value=" Spring Water" data-price="0.50"> Spring Water</option>
+									<option value="Sparkling Water" data-price="0.70">Sparkling Water</option>
+									<option value="Alkaline Water" data-price="1.20">Alkaline Water</option>
+									<option value=" Distilled Water" data-price="1.50"> Distilled Water</option>
+								</select>
+								<button class="add-to-cart">Add to Cart</button> <!-- add to cart button for add item in to the cart-->
+						</div>
+							
+						<!--add container for 500ml bottles-->
+						<div class="product-item">
+							<img src="image/500ml.jpg" alt="500ml">
+							<h3>500ml Bottle</h3>
+								<p class="price" data-price="10">price:$1.00</p>
+									<div class="quantity">
+										<button class="quantity-btn-decrement">-</button>
+										<input type="text" class="input" value="1" readonly>
+										<button class="quantity-btn-increment">+</button>
+									</div>
+									<div class="size">
+										<p>Select type:</p>
+									</div>
+									<select class="type-select">
+										<option value=" Mineral Water" data-price="1.00"> Mineral Water</option>
+										<option value=" Purified Water" data-price="2.50"> Purified Water</option>
+										<option value=" Spring Water" data-price="1.00"> Spring Water</option>
+										<option value="Sparkling Water" data-price="1.40">Sparkling Water</option>
+										<option value="Alkaline Water" data-price="2.10">Alkaline Water</option>
+										<option value=" Distilled Water" data-price="2.20"> Distilled Water</option>
+									</select>
+									<button class="add-to-cart">Add to Cart</button>
+						</div>
+						
+						<!--add container for 1L bottles-->
+						<div class="product-item">
+							<img src="image/1l.jpg" alt="Sparkling-Water">
+							<h3>1L Bottler</h3>
+								<p class="price" data-price="10">price:$2.20</p>
+									<div class="quantity">
+										<button class="quantity-btn-decrement">-</button>
+										<input type="text" class="input"value="1" readonly>
+										<button class="quantity-btn-increment">+</button>
+									</div>
+									<div class="size">
+										<p>Select type:</p>
+									</div>
+									<select class="type-select">
+										<option value=" Mineral Water" data-price="2.20"> Mineral Water</option>
+										<option value=" Purified Water" data-price="4.50"> Purified Water</option>
+										<option value=" Spring Water" data-price="2.50"> Spring Water</option>
+										<option value="Sparkling Water" data-price="3.00">Sparkling Water</option>
+										<option value="Alkaline Water" data-price="3.50">Alkaline Water</option>
+										<option value=" Distilled Water" data-price="4.00"> Distilled Water</option>
+							
+									</select>
+									<button class="add-to-cart">Add to Cart</button>
+						</div>
+			
+						<!--add container for 1.5L bottles-->
+						<div class="product-item">
+							<img src="image/ml.jpg" alt="1500ml">
+							<h3>1.5L Bottle</h3>
+								<p class="price" data-price="10">price:$01.40</p>
+									<div class="quantity">
+										<button class="quantity-btn-decrement">-</button>
+										<input type="text" class="input"value="1" readonly>
+										<button class="quantity-btn-increment">+</button>
+									</div>
+									<div class="size">
+										<p>Select type:</p>
+									</div>
+									<select class="type-select">
+										<option value=" Mineral Water" data-price="1.40"> Mineral Water</option>
+										<option value=" Purified Water" data-price="3.50"> Purified Water</option>
+										<option value=" Spring Water" data-price="1.75"> Spring Water</option>
+										<option value="Sparkling Water" data-price="2.50">Sparkling Water</option>
+										<option value="Alkaline Water" data-price="3.00">Alkaline Water</option>
+										<option value=" Distilled Water" data-price="3.00"> Distilled Water</option>
+									</select>
+									<button class="add-to-cart">Add to Cart</button>
+						</div>
+      
+						<!--add container for 250ml bottles-->
+						<div class="product-item">
+							<img src="image/1galloon.jpg" alt="Alkaline-Water">
+							<h3>1 Galloon</h3>
+								<p class="price" data-price="10">price:$3.00</p>
+									<div class="quantity">
+										<button class="quantity-btn-decrement">-</button>
+										<input type="text" class="input" value="1" readonly>
+										<button class="quantity-btn-increment">+</button>
+									</div>
+									<div class="size">
+										<p>Select type:</p>
+									</div>
+									<select class="type-select">
+										<option value=" Mineral Water" data-price="3.00"> Mineral Water</option>
+										<option value=" Spring Water" data-price="3.50"> Spring Water</option>
+										<option value=" Distilled Water" data-price="3.00"> Distilled Water</option>
+									</select>
+									<button class="add-to-cart">Add to Cart</button>
+						</div>
+      
+						<!--add container for 250ml bottles-->
+						<div class="product-item">
+							<img src="image/5galloon.jpg" alt="Distilled-Water">
+							<h3>5 galloon</h3>
+								<p class="price" data-price="10">price:$10.50</p>
+									<div class="quantity">
+										<button class="quantity-btn-decrement">-</button>
+										<input type="text" class="input"value="1" readonly>
+										<button class="quantity-btn-increment">+</button>
+									</div>
+									<div class="size">
+										<p>Select type:</p>
+									</div>
+									<select class="type-select">
+										<option value=" Purified Water" data-price="10.50"> Purified Water</option>
+									</select>
+									<button class="add-to-cart">Add to Cart</button>
+						</div>
+					</div>
+				
+					<!--create a container for cart-->
+					<div class="order-summary" >
+						<h2 class="cart">Shopping Cart</h2>
+							<p class="empty-cart-msg">Your cart is empty.</p>
+								<div class="cart-items"> <!-- to add cart items-->
+								</div>
+								<p class="total">Total: $0</p>
+								<button class="checkout-btn">Checkout</button><!-- check out button for continue buying products -->
+									<div id="validation-msg" style="display: none;"></div>
+										<button class="clear-cart-btn">Empty</button>
+					</div>
+			</div>
+		</div>
+	</main>			
+	<!--Displaying the footer part of the web page-->
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+
+        <div class="footer-container">
+            <!-- Footer Branding Section -->
+            <div class="footer-branding">
+                <img src="image/logo.jpg" alt="AquaMartLogo" class="footer-logo">
+
+                <p class="footer-contact">
+                <strong>72/2, Vajira Road,<br> Colombo 007,<br> Sri Lanka.</strong><br>
+                Phone: 0112226444<br>
+                Email: <a href="mailto:aquamart@gmail.com">aquamart@gmail.com</a>
+                </p>
+            </div>
+
+            <div class="footer-section navigation">
+                <h2>Navigate</h2>
+                <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="shop.html">Our products</a></li>
+                <li><a href="donateus.html">Donate us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section view">
+                <h2>View</h2>
+                <ul>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section editor">
+                <h2>Links for Editor's page</h2>
+                <ul>
+                <li><a href="page_editor.html" target="_blank">Page Editor (Student 1)</a></li>
+                <li><a href="editor_student2.html" target="_blank">Page Editor (Student 2)</a></li>
+				<li><a href="PageEditor3.html" target="_blank">Page Editor (Student 3)</a></li>
+                <li><a href="page_editor4.html" target="_blank">Page Editor (Student 4)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyrighttext">
+            <p>© 2024 Aqua Mart All rights reserved</p>
+        </div>
+	</footer>
+<script src="shop.js"></script>
+ <script src="navscript.js"></script>
+</body>
+</html>

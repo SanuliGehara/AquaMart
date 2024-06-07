@@ -1,0 +1,263 @@
+body {
+	background-image:url('image/shop.jpg');
+	margin: 0;
+	padding: 0;
+}
+
+#container{
+	width: 900px;
+	height:1300px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+.caption {
+  text-align: center;
+  color:black;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: Center;
+}
+
+.product-item {
+  width: 250px; /* Adjust this value to set the width of each product item */
+  height: 455px; /* Ensures that the height adjusts according to the content */
+  margin: 20px;
+  text-align: Center;
+  align-items:Center;
+  border: 1px solid #ccc; /* Optional: Add a border for better visualization */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  padding: 10px; 
+  position: relative; 
+  display: flex; /* Use flexbox to align items horizontally */
+  flex-direction: column;
+  background-color:white;
+  cursor: pointer;
+}
+.quantity-btn-decrement,.quantity-btn-increment{
+	padding: 5px 10px; /* Adjust padding to change button size */
+    font-size: 16px; /* Adjust font size if needed */
+    background-color: #f0f0f0; /* Background color of the buttons */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 3px; /* Border radius */
+    cursor: pointer;
+}
+.input{
+	width: 35px; /* Adjust this value to set the width of each product item */
+	height: 25px;
+	text-align:Center;
+}	
+
+.product-item img {
+  width: 100%;
+  height: 225px; 
+}
+
+.product-item h3,.product-item p,.product-item select {
+  margin: 5px 0; /* Adjust margins as needed */ 
+
+}
+
+.product-item h3 {
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.product-item p {
+  font-size: 14px; /* Adjust font size as needed */
+}
+
+
+.add-to-cart {
+  display: block;
+  width: 100%;
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  bottom: 0px; /* Adjust this value to set the vertical position */
+  left: 50%; /* Center the button horizontally */
+ 
+}
+
+.add-to-cart:hover {
+  background-color: #0056b3;
+}
+#size {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 75px; 
+  }
+  .size-select option {
+  text-align: center;
+}
+
+.order-summary{
+    border: 1px solid #ccc;
+    padding: 20px;
+	background-image:url("image/cart.jpg");
+	top:500px;
+	bottom:10px;
+	left:0px;
+	width:300px;
+	position:fixed;
+	overflow-y: auto;
+	}
+
+.clear-cart-btn{
+	width:80px;
+	height:40px;
+	background-color:red;
+	text-align:Center;
+}
+/* Style for the cart item element */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+	color:blue;
+}
+.cart{
+	color:#154360;
+}
+
+/* Style for the remove button */
+.remove-button {
+    background-color: #ff6347; /* Red color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 50%; /* Rounded shape */
+    width: 30px; /* Adjust width */
+    height: 30px; /* Adjust height */
+    font-size: 14px; /* Adjust font size */
+    cursor: pointer; /* Cursor style */
+}
+
+.remove-button:hover {
+    background-color: #dc143c; /* Darker red color on hover */
+}
+
+ .paymentpage{
+     background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+.payment:hover {
+            background-color: #45a049;
+		}
+.empty-cart-msg {
+    display: none;
+    font-style: italic;
+}
+.total {
+    font-weight: bold;
+	color:
+}
+#validation-msg {
+    display: block; 
+    color: red;
+    margin-top: 10px;
+}
+
+
+/* Style for the payment details container */
+#payment{
+  max-width: 400px; /* Adjust width as needed */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-left:50px;
+  top:-600px;
+}
+
+/* Style for the form headings */
+h2 {
+  margin-top: 0;
+}
+
+/* Style for form labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style for form inputs */
+input {
+  width: calc(100% - 12px); /* Adjust width to leave space for border and padding */
+  padding: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+/* Checkout Summary */
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+ul#cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul#cart-items li {
+    margin-bottom: 10px;
+}
+
+#shipping-cost,
+#number-of-items,
+#total-price {
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.edit {
+    margin-right: 10px;
+}
+
+button.pay {
+    background-color: #28a745;
+}
+
+button.pay:hover {
+    background-color: #218838;
+}

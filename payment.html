@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment details</title>
+	<link href="nav.css"  rel="stylesheet" type="text/css">
+	<link href="payment.css"  rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+ <!--Navigaion bar-->
+    <header>
+	
+        <img class="logo" src='image/logo.jpg' alt="Aqua Mart Logo">     
+        <nav class="navbar" id="mynavbar">
+            <a href="home.html">Home</a>    
+            <a href="about.html">About us</a>
+            <a href="shop.html" >Product</a> 
+            <a href="donateus.html">Donate us</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactus.html">Contacts</a>
+            <a href="profile.html">Login</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">  <!--menu icon-->
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>  
+	<main>	<!--add main container for get space before the footer wave-->
+		<div class="container">
+			<div id="paymentSection" class="section">
+				<!-- Payment form and order summary -->
+				<h1>Payment Form</h1>
+					<form id="paymentForm">
+						<!-- Payment form fields (e.g., credit card number, etc.) -->
+						<label for="username">Username:<span class="required">*</span></label>
+						<input type="text" id="username" name="username" required>
+			 
+						<label for="address">Adress:<span class="required">*</span></lable>
+						<input type="text" id="address" name="address" required>
+				
+						<label for="telephone-no">Telephone no:<span class="required">*</span></lable>
+						<input type="text" id="telephone-no" name="telephone-no" required>
+			 
+						<label for="Email">Email:</lable>
+						<input type="Email" id="Email" name="Email">
+			 
+						<label for="card-number">card number:<span class="required">*</span></lable>
+						<input type="text" id="card-number" name="card-number" required>
+			 
+						<label for="expire-date">Expire Date:<span class="required">*</span></lable>
+						<input type="Date" id="expire-date" name="expire-date" required>
+			 
+						<label for="CVV">CVV:<span class="required">*</span></lable>
+						<input type="text" id="CVV" name="CVV" required>
+						<button type="submit">Submit Payment</button><!-- create a button for pay-->
+						<button type="button" class="back-to-cart" onclick="backToCart()" formnovalidate>Back to Cart</button><!-- create a button for redrict to shop page-->
+					</form>
+			</div>
+		</div>
+	</main>
+	
+	<!--Displaying the footer part of the web page-->
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+
+        <div class="footer-container">
+            <!-- Footer Branding Section -->
+            <div class="footer-branding">
+                <img src="image/logo.jpg" alt="AquaMartLogo" class="footer-logo">
+
+                <p class="footer-contact">
+                <strong>72/2, Vajira Road,<br> Colombo 007,<br> Sri Lanka.</strong><br>
+                Phone: 0112226444<br>
+                Email: <a href="mailto:aquamart@gmail.com">aquamart@gmail.com</a>
+                </p>
+            </div>
+
+            <div class="footer-section navigation">
+                <h2>Navigate</h2>
+                <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="shop.html">Our products</a></li>
+                <li><a href="donateus.html">Donate us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section view">
+                <h2>View</h2>
+                <ul>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section editor">
+                <h2>Links for Editor's page</h2>
+                <ul>
+                <li><a href="page_editor.html" target="_blank">Page Editor (Student 1)</a></li>
+                <li><a href="editor_student2.html" target="_blank">Page Editor (Student 2)</a></li>
+				<li><a href="PageEditor3.html" target="_blank">Page Editor (Student 3)</a></li>
+                <li><a href="page_editor4.html" target="_blank">Page Editor (Student 4)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyrighttext">
+            <p>© 2024 Aqua Mart All rights reserved</p>
+        </div>
+	</footer>
+
+    <script>
+
+        function backToCart() {
+            document.getElementById('shopSection').classList.add('active');
+            document.getElementById('paymentSection').classList.remove('active');
+        }
+
+        // You can add JavaScript for form submission and processing here
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            // You can add code to handle payment processing here
+            alert('Payment successful!');
+		 // Close the payment page
+        window.close();
+
+        // Redirect to the shop page
+        window.location.href = "shop.html";
+    });
+	function backToCart() {
+    // Hide the payment section
+    document.getElementById('paymentSection').style.display = 'none';
+    // Redirect to the shop page
+        window.location.href = "shop.html";
+}
+ // Parse query parameters to get cart data
+  document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const cartData = urlParams.get('cart');
+    const cartItems = JSON.parse(decodeURIComponent(cartData)); // Decode and parse JSON data
+
+    // Update order summary based on cart data
+    updateOrderSummary(cartItems);
+  });
+
+  function updateOrderSummary(cartItems) {
+    // Get the container element for the order summary
+    const orderSummaryContainer = document.querySelector(".order-summary");
+
+    // Clear any existing content in the order summary container
+    orderSummaryContainer.innerHTML = "";
+
+    // Loop through the cart items and create elements to display in the order summary
+    cartItems.forEach(item => {
+      // Create a div element for each cart item
+      const itemDiv = document.createElement("div");
+      itemDiv.classList.add("order-item");
+
+      // Create elements to display item details (e.g., name, price, quantity)
+      const itemName = document.createElement("span");
+      itemName.textContent = item.name;
+
+      const itemPrice = document.createElement("span");
+      itemPrice.textContent = `$${item.price.toFixed(2)}`;
+
+      const itemQuantity = document.createElement("span");
+      itemQuantity.textContent = `Quantity: ${item.quantity}`;
+
+      // Append item details to the item div
+      itemDiv.appendChild(itemName);
+      itemDiv.appendChild(itemPrice);
+      itemDiv.appendChild(itemQuantity);
+
+      // Append the item div to the order summary container
+      orderSummaryContainer.appendChild(itemDiv);
+    });
+  }
+    </script>
+</body>
+</html>
