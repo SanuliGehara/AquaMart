@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Mart</title>
+
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">      <!--common template css file-->
+    <link rel="stylesheet" href="homeStyle.css">
+    <script src="home.js" defer></script>
+</head>
+
+<body>
+    <!--Navigaion bar-->
+    <header>
+        <img class="logo" src="image/logo.jpg" alt="Aqua Mart Logo">
+        <nav class="navbar" id="mynavbar">
+            <a href="home.html" class="active">Home</a>
+            <a href="about.html">About us</a>
+            <a href="shop.html">Products</a>
+            <a href="donateus.html">Donate us</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactus.html">Contacts</a>
+            <a href="profile.html">Login</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">  <!--menu icon-->
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+    <!--Main body of home page-->
+    <main>
+        <div class="slideshow-container">
+            <!-- Full-width slides/quotes -->
+            <div class="mySlides fade">
+                <img src="image/homeSlide1.jpg" alt="slide 1" style="width:100%">
+                <div class="text-overlay">
+                    <p>Safe and readily available water is important for public health, whether it is used for
+                        drinking, domestic use, food production or recreational purposes.</p>
+                </div>
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="image/homeSlide2.jpg" alt="slide 2" style="width:100%">
+                <div class="text-overlay">
+                    <p>Improved water supply and sanitation, and better management of water resources, can boost
+                        countries' economic growth and can contribute greatly to poverty reduction.</p>
+                </div>
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="image/homeSlide3.jpg" alt="slide 3" style="width:100%">
+                <div class="text-overlay">
+                    <p>Give the Gift of Lasting Change</p>
+                    <p>Nadepe, 7, lives in a dry, rural region of Kenya where almost 9 in 10 people live in poverty.</p>
+                    <p>Through World Vision child sponsorship, Nadepe's life is changing — now she can go to school!</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="image/homeSlide5.jpg" alt="slide 5" style="width:100%">
+                <div class="text-overlay">
+                    <p>Give the Gift of Lasting Change</p>
+                    <p>Nadepe, 7, lives in a dry, rural region of Kenya where almost 9 in 10 people live in poverty.</p>
+                    <p>Through World Vision child sponsorship, Nadepe's life is changing — now she can go to school!</p>
+                </div>
+            </div>
+
+            <!-- Dots/circles for navigation -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <!--Our mission section-->
+        <section class="our-mission">
+            <h2>Our Mission</h2>
+            <h3><i>Clean Water and Sanitation:</i></h3>
+            <p>Our goal is to provide clean, safe, and accessible water to transform lives. <br>We purify, innovate, and
+                supply a wide range of water for household and specialized needs. We aim to empower communities in need
+                and ensure clean water is a fundamental right accessible to all, supporting global health, well-being,
+                and prosperity.</p>
+            <button class="btn" onclick="location.href='about.html'">Learn More</button>
+        </section>
+
+        <!-- Products and Charity Outcomes Section -->
+        <section class="outcomes">
+            <!-- Our Products Block -->
+            <div class="outcome-block">
+                <a href="shop.html">
+                    <img src="image/our-products.jpeg" alt="Our Products">
+                    <h3>Our Products</h3>
+                </a>
+            </div>
+            <!-- Our Impact/Charity Work Block -->
+            <div class="outcome-block">
+                <a href="donateus.html">
+                    <img src="image/charity-water.jpeg" alt="Community Support">
+                    <h3>Community Support</h3>
+                </a>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us">
+            <h2>Why choose us?</h2>
+            <div class="reasons-container">
+
+                <!-- Reason Block 1 -->
+                <div class="reason-block">
+                    <img src="image/purify-water.jpeg" alt="Quality Water">
+                    <div class="reason-text">
+                        <h3>High-Quality, Purified Water</h3>
+                        <p>We prioritize your health and satisfaction above all else. That's why we go to great lengths to 
+                            ensure that every drop of water we provide is of the highest quality. Through advanced purification processes, 
+                            our water undergoes rigorous testing and filtration to remove impurities, contaminants, and pollutants. 
+                            You can trust that when you choose us, you're choosing water that meets stringent quality standards,
+                             giving you peace of mind with every sip.</p>
+                        <a href="water_purification.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Reason Block 2 -->
+                <div class="reason-block">
+                    <div class="reason-text">
+                        <h3>Variety to Suit Your Needs</h3>
+                        <p>We understand that everyone's preferences and needs are different. That's why we offer a diverse selection 
+                            of water types to cater to your specific needs and tastes. Whether you prefer crisp spring water, 
+                            refreshing mineral water, or infused flavored options, we have something for everyone. Our range ensures that you 
+                            can find the perfect match for your hydration needs</p>
+                        <a href="water_types.html" class="btn">View Options</a>
+                    </div>
+                    <img src="image/customized-water.png" alt="Customized Water">
+                </div>
+
+                <!-- Reason Block 3 -->
+                <div class="reason-block">
+                    <div class="reason-text">
+                        <h3>Affordable Pricing</h3>
+                        <p> we believe that access to clean, purified water should never be a luxury. That's why we're committed to keeping 
+                            our prices affordable for all. By prioritizing affordability without compromising on quality, we aim to make 
+                            high-quality water accessible to everyone in our community. With us, you can enjoy the benefits of premium water 
+                            without the hefty price tag, ensuring that staying hydrated is always within reach.</p>
+                        <a href="shop.html" class="btn">Shop now</a>
+                    </div>
+                    <img src="image/affordable-water.jpg" alt="Affordable Water">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Content Section for hydrating communities -->
+        <section class="content-section">
+            <h2 class="content-title">Join Our Cause to Hydrating Communities</h2> 
+            
+            <div class="content-container">
+                <p>At Aqua Mart, we are committed to more than just providing high-quality water products; we are dedicated to making a difference in the world. Our charitable initiatives focus on bringing clean, safe, and sustainable water supplies to undeserved communities because we believe access to pure water is a fundamental human right.</p>
+                <p>Your support can help us expand our reach. Every donation makes a real impact. Together, let's bring clean water to more people and make the world a better, healthier place. Join us to hydrate the world with safe, clean water.</p>
+                <button class="btn" onclick="location.href='donateus.html'">Join Us</button>  
+            </div>
+        </section>
+    </main>
+
+    <!--Displaying the footer part of the web page-->
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+
+        <div class="footer-container">
+            <!-- Footer Branding Section -->
+            <div class="footer-branding">
+                <img src="image/logo.jpg" alt="Aqua Mart Logo" class="footer-logo">
+                <p class="footer-contact">
+                    <strong>72/2, Vajira Road,<br> Colombo 007,<br> Sri Lanka.</strong><br>
+                    Phone: 0112226444<br>
+                    Email: <a href="mailto:aquamart@gmail.com">aquamart@gmail.com</a>
+                </p>
+            </div>
+
+             <!-- Footer Navigation Section -->
+            <div class="footer-section navigation">
+                <h2>Navigate</h2>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="shop.html">Our products</a></li>
+                    <li><a href="donateus.html">Donate us</a></li>
+                </ul>
+            </div>
+
+             <!-- Footer View Section -->
+            <div class="footer-section view">
+                <h2>View</h2>
+                <ul>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+
+             <!-- Footer Editor's Section -->
+            <div class="footer-section editor">
+                <h2>Links for Editor's page</h2>
+                <ul>
+                <li><a href="page_editor.html" target="_blank">Page Editor (Student 1)</a></li>
+                <li><a href="editor_student2.html" target="_blank">Page Editor (Student 2)</a></li>
+				<li><a href="PageEditor3.html" target="_blank">Page Editor (Student 3)</a></li>
+                <li><a href="page_editor4.html" target="_blank">Page Editor (Student 4)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyrighttext">
+            <p>© 2024 Aqua Mart All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+main {
+    margin-bottom: 100px; 
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: auto;
+    overflow: hidden; /* Add this to prevent overflowing content */
+}
+
+/* Slides */
+.mySlides {
+    display: none;
+    position: relative; /* Relative positioning for the positioning of overlay text */
+    max-height: 70vh;
+}
+
+/* Images within slides */
+.mySlides img {
+    width: 100%;
+    max-height: 70vh;   /*maximum height of the slideshow */
+    object-fit: cover;  /*cover the area of the container without stretching */
+    display: block;
+}
+
+/* Overlay text */
+.text-overlay {
+    position: absolute;
+    bottom: 10px; /* Position the overlay text at the bottom of the slide */
+    width: 100%;
+    text-align: center;
+    color: #f2f2f2;
+    font-size: 18px; 
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.6); 
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+  
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #3a3636;
+}
+  
+/* Mission Statement Section */
+.our-mission {
+    background-color: #e6f7ff; 
+    padding: 20px; 
+    text-align: center; /* Center-align the text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin: 0; 
+}
+
+.our-mission h3 {
+    font-size: 20px; 
+    font-family: 'Arial', sans-serif; 
+    margin-bottom: 15px; /* Space below the subtitle */
+}
+
+
+.our-mission p, .reason-text p, .outcome-block h3 {
+    font-size: 20px; 
+}
+
+.our-mission p {
+    color: black; 
+    margin-bottom: 1.5rem; /* Space above the button */
+    max-width: 800px; /* Maximum width of text block */
+    margin-left: auto; /* Center the paragraph block horizontally */
+    margin-right: auto; /* Center the paragraph block horizontally */
+}
+
+.reason-block h3 {
+    font-size: 25px; 
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.our-mission h2,  .why-choose-us h2 {
+    font-size: 27px; 
+    color: #273c75; 
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.our-mission .btn {
+    background-color: #007bff; 
+}
+
+.our-mission .btn:hover, .btn:hover {
+    background-color: #355ad4;
+    transform: scale(1.05);   /* Button grows slightly to provide feedback */
+    color: white;
+    padding: 12px 25px; /* Padding inside the button */
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; /* Changes cursor to indicate the button is clickable */
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Styles for Outcomes Section */
+.outcomes {
+    display: flex;
+    justify-content: center; /* Center the blocks horizontally */
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin: 20px 0; /* Vertical spacing from other elements */
+}
+
+.outcome-block {
+    width: calc(40% - 30px); /* Adjusts block width to take into account the gap */
+    text-align: center;
+    margin: 10px 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+    border-radius: 10px;
+}
+
+.outcome-block a {
+    color: inherit; /* Inherits the color from parent for consistent styling */
+    text-decoration: none; /* Removes underline from links */
+    display: block; /* Allows the entire area to be clickable */
+}
+
+.outcome-block img {
+    width: 100%; 
+    max-height: 250px; /* Limit the height of the images */
+    object-fit: contain; /* Ensures the full image is visible within the block */
+    border-radius: 10px; 
+}
+
+.outcome-block h3 {
+    color: #0056b3;
+    font-size: 22px; 
+    margin-top: 10px;
+    margin-bottom: 0; 
+}
+
+.outcome-block:hover img {
+    transform: scale(1.05); /* Scales image up slightly on hover */
+}
+
+/* Why Choose Us Section Styles */
+.why-choose-us {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #e6f7ff;
+}
+
+.why-choose-us h2 {
+    margin-bottom: 1rem;
+}
+
+.reasons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.reason-block {
+    display: flex;
+    flex-direction: row; /* Switch to column on smaller screens in the media query */
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px; 
+    width: 100%;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.reason-block img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.reason-text {
+    padding: 20px;
+    flex: 1;
+}
+
+.reason-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 10px;
+    line-height: 1.6; 
+    text-align: justify;
+}
+
+.reason-block:nth-child(even) {
+    flex-direction: row-reverse; /* Reverse the order for every other block */
+}
+
+.btn, .content-section .btn {
+    padding: 10px 20px; 
+    margin-top: 15px;               /* Space above the button */
+    background-color: #007bff; 
+    color: white; /* Text color */
+    text-decoration: none; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    align-self: start; /* Aligns button to the start of the text block */
+}
+
+.btn:hover, .content-section .btn:hover {
+    background-color: #355ad4; 
+    transform: scale(1.05); /* Enlarges the button */
+}
+
+.content-title {
+    font-size: 28px; 
+    color: #273c75; 
+    margin-bottom: 24px; 
+    text-align: center; 
+}
+
+.content-section {
+    padding: 30px 20px; /* Add padding for spacing */
+    margin-top: 50px;
+    background-color: #e6f7ff; 
+    text-align: center;
+}
+
+.content-container {
+    max-width: 800px; /* Maximum width of the content */
+    margin: 0 auto; /* Center the content container */
+}
+
+.content-section p {
+    font-size: 18px; 
+    color: black; 
+    margin-bottom: 10px;
+    line-height: 1.6; 
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .outcomes {
+        flex-direction: column; /* Stack blocks on top of each other */
+    }
+
+    .outcome-block {
+        flex-basis: 100%; /* Each block takes full width */
+    }
+
+    .outcome-block img {
+        max-height: 200px; /* Adjust height for smaller screens */
+    }
+
+    .our-mission h2 {
+        font-size: 1.75rem; /* Smaller font size for the title on smaller screens */
+    }
+
+    .our-mission h3 {
+        font-size: 1.25rem; /* Smaller font size for the subheading on smaller screens */
+    }
+
+    .our-mission p {
+        font-size: 0.95rem; /* Adjust the font size for the paragraph on smaller screens */
+    }
+
+    .our-mission .btn {
+        padding: 10px 20px; /* Adjust button padding on smaller screens */
+    }
+
+    .reasons-container {
+        flex-direction: column; /* Stack the reasons on top of each other */
+    }
+
+    .reason-block {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .reason-block img {
+        width: 100%;
+    }
+
+    .reason-block:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .content-container {
+        padding: 0 10px; /* Add padding on smaller screens */
+    }
+}
